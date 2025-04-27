@@ -9,6 +9,7 @@ _This is Italic_
 
 
 ```
-code
+code line 1
+code line 2
 ```
 
