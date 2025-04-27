@@ -21,6 +21,8 @@ code line 2
 # yt link
 https://www.youtube.com
 
+[yt](www.youtube.com)
+
 
 # Disable link
 `https://www.youtube.com`
