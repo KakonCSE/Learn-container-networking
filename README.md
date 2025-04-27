@@ -3,7 +3,9 @@
 
 _This is Italic_
 
+~~delete~~
 
+`single line code`
 
 
 ```
