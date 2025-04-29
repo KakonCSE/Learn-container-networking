@@ -35,11 +35,13 @@ default via 10.56.80.101 dev ens34 proto static metric 100
 10.56.80.100/30 dev ens34 proto kernel scope link src 10.56.80.102 metric 100
 ```
 
-#iptables is a user-space utility for configuring packet filter rules in the Linux kernel's Netfilter framework. View iptables rules:
+#iptables is a user-space utility for configuring packet filter rules in the Linux kernel's Netfilter framework.
+#Let's check for `iptable` rules for custom namespace
+
 ```
 kakon@DevOps:~$ sudo iptables -L
 ```
-#Let's check for `iptable` rules for custom namespace
+
 
 #Create Custom Network Namespace
 
