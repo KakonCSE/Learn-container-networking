@@ -13,7 +13,7 @@ kakon@DevOps:~$ ip link list
     altname enp2s2
 ```
 
-`lo` is the loopback interface, allowing local network communication within a device without external network involvement. Verify the loopback interface is up
+#`lo` is the loopback interface, allowing local network communication within a device without external network involvement. Verify the loopback interface is up
 
 ```
 kakon@DevOps:~$ ifconfig lo
