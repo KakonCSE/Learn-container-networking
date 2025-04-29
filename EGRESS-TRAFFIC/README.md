@@ -25,7 +25,7 @@ kakon@DevOps:~$ ip addr show dev br0
     inet6 fe80::589b:78ff:fe51:4e01/64 scope link
        valid_lft forever preferred_lft forever
 ```
-# Now let's verify whether br0 is able to receive the packet or not.
+#Now let's verify whether br0 is able to receive the packet or not.
 ```
 kakon@DevOps:~$ ping 192.168.0.1 -c 3
 PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
