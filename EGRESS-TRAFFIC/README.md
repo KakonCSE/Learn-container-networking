@@ -134,16 +134,16 @@ See! The source IP address, 192.168.0.2, is attempting to connect to Google DNS 
 #Solution
 We must somehow change the private IP address to a public address in order to sort out this issue with the help of NAT (Network Translation Address). So, a SNAT (source NAT) rule must be added to the IP table in order to modify the POSTROUTING chain.
 
-###From root-ns
+#From root-ns
 ```
 kakon@DevOps:~$ sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/16  -j MASQUERADE
 ```
-###Enable IP forwarding
+#Enable IP forwarding
 ```
 kakon@DevOps:~$ sudo  sysctl -w net.ipv4.ip_forward=1
 net.ipv4.ip_forward = 1
 ```
-###For Permanent
+#For Permanent
 ```
 kakon@DevOps:~$ vim /etc/sysctl.conf
 ```
@@ -151,7 +151,7 @@ kakon@DevOps:~$ vim /etc/sysctl.conf
 ```
 net.ipv4.ip_forward=1
 ```
-###Then Apply
+#Then Apply
 ```
 kakon@DevOps:~$ sudo sysctl -p
 net.ipv4.ip_forward = 1
