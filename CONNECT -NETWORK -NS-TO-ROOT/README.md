@@ -1,7 +1,7 @@
 # CONNECT NETWORK NS TO ROOT
 
 #Connecting a container network namespace to root network namespace
-<img src="NS to root.png" alt="picture" />
+<img src="Ns to root.png" alt="picture" />
 
 #Let's create a custom network namespace `ns0` and a bridge `br0` In Linux networking, a bridge is a virtual network device that connects multiple network interfaces, allowing them to function as a single logical network.
 ```
