@@ -1,4 +1,4 @@
-#NETWORK-NAMESPACE-INSPECTING
+# NETWORK-NAMESPACE-INSPECTING
 
 <p>In Linux networking, within the Linux network stack, routes define traffic paths, iptables configures packet filtering, lo is a local loopback interface for testing, and ens34 is the primary Ethernet interface for external connections. Let's inspect the network stack, in short.</p>
 
