@@ -149,7 +149,7 @@ Now run again `sudo ip netns exec blue-namespace ip link` and `sudo ip netns exe
     link/ether 22:21:fc:9e:d0:2b brd ff:ff:ff:ff:ff:ff link-netns blue-namespace
 ```
 
-### Six Step:
+### Seven Step:
 
 7. Set Default Routes
    
