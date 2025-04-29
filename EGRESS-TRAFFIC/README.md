@@ -129,14 +129,16 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 #Here we can see that packets are coming to those interfaces but are still stuck in ns0. But why?
 
 #Root Cause
-See! The source IP address, 192.168.0.2, is attempting to connect to Google DNS 8.8.8.8 using its private IP address. So it's very basic that the outside world can't reach that private IP because they have no idea about that particular private IP address. That's why packets are able to reach Google DNS, but we are not getting any replies from 8.8.8.8.
+
+See! The source IP address, `192.168.0.2`, is attempting to connect to Google DNS `8.8.8.8` using its private IP address. So it's very basic that the outside world can't reach that private IP because they have no idea about that particular private IP address. That's why packets are able to reach Google DNS, but we are not getting any replies from `8.8.8.8`.
 
 #Solution
+
 We must somehow change the private IP address to a public address in order to sort out this issue with the help of NAT (Network Translation Address). So, a SNAT (source NAT) rule must be added to the IP table in order to modify the POSTROUTING chain.
 
 #From root-ns
 ```
-kakon@DevOps:~$ sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/16  -j MASQUERADE
+kakon@DevOps:~$ sudo iptables -t nat -A POSTROUTING -s `192.168.0.0/16`  -j MASQUERADE
 ```
 #Enable IP forwarding
 ```
