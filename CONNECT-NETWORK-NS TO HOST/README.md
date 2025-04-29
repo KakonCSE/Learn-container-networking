@@ -1,7 +1,7 @@
 # CONNECT-NETWORK-NS-TO-HOST
 
 #Connecting a container to host using virtual Ethernet cable
-
+<img src="Screenshot_1-- NS to host.png" alt="picture" />
 
 
 #Let's create a custom namespace using ip netns add utiliy.
