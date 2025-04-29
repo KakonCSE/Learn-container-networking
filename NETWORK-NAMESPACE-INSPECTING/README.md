@@ -1,4 +1,6 @@
-<p>In Linux networking, within the Linux network stack, routes define traffic paths, iptables configures packet filtering, `lo` is a local loopback interface for testing, and `ens34` is the primary Ethernet interface for external connections. Let's inspect the network stack, in short.</p>
+#NETWORK-NAMESPACE-INSPECTING
+
+<p>In Linux networking, within the Linux network stack, routes define traffic paths, iptables configures packet filtering, lo is a local loopback interface for testing, and ens34 is the primary Ethernet interface for external connections. Let's inspect the network stack, in short.</p>
 
 <p>Network interfaces allow us to establish communication between a network and a device.</p>
 
@@ -33,13 +35,13 @@ default via 10.56.80.101 dev ens34 proto static metric 100
 10.56.80.100/30 dev ens34 proto kernel scope link src 10.56.80.102 metric 100
 ```
 
-##iptables is a user-space utility for configuring packet filter rules in the Linux kernel's Netfilter framework. View iptables rules:
+#iptables is a user-space utility for configuring packet filter rules in the Linux kernel's Netfilter framework. View iptables rules:
 
 kakon@DevOps:~$ sudo iptables -L
 
-##Let's check for `iptable` rules for custom namespace
+#Let's check for `iptable` rules for custom namespace
 
-##Create Custom Network Namespace
+#Create Custom Network Namespace
 
 ```
 kakon@DevOps:~$ sudo ip netns add kakon
@@ -47,7 +49,7 @@ kakon@DevOps:~$ sudo ip netns list
 kakon
 ```
 
-##Now, entering a network namespace in Linux:
+#Now, entering a network namespace in Linux:
 
 ```
 kakon@DevOps:~$ sudo ip netns exec kakon bash
@@ -56,7 +58,8 @@ root@DevOps:/home/kakon# ip link
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
 ```
 
-##The nsenter utility is commonly used to enter into namespaces in Linux, including network namespaces.
+#The nsenter utility is commonly used to enter into namespaces in Linux, including network namespaces.
+
 ```
 sudo nsenter --net=/var/run/netns/kakon bash
 ```
