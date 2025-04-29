@@ -1,8 +1,9 @@
-# EGRESS TRAFFIC
+# EGRESS-TRAFFIC
 
 #Connecting a container network namespace to root network namespace
 
 #Let's create a custom network namespace `ns0` and a bridge `br0`. In Linux networking, a bridge is a virtual network device that connects multiple network interfaces, allowing them to function as a single logical network.
+
 ```
 kakon@DevOps:~$ sudo ip netns add ns0
 kakon@DevOps:~$ sudo ip link add br0 type bridge
