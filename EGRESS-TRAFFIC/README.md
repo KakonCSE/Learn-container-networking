@@ -39,7 +39,7 @@ rtt min/avg/max/mdev = 0.049/0.062/0.080/0.012 ms
 ```
 #Configure virtual ethernet cable
 
-$It's time to set up a virtual Ethernet cable. One cable hand will be configured as a nic card in the `ns0` namespace, while the other hand will be configured in the `br0` interface.
+#It's time to set up a virtual Ethernet cable. One cable hand will be configured as a nic card in the `ns0` namespace, while the other hand will be configured in the `br0` interface.
 ```
 kakon@DevOps:~$ sudo ip link add veth0 type veth peer name ceth0
 kakon@DevOps:~$ sudo ip netns exec ns0 bash
@@ -126,7 +126,7 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 ```
 #Okay, it does not seem that the network is unreachable. It's something else. Maybe somewhere, packets have stuck. Let's dig it out. We can do it using the Linux utility `tcpdump`. We will check two interfaces. One is `br0`, and the other is `ens3` (in the case of my device). 
 
-# Here we can see that packets are coming to those interfaces but are still stuck in ns0. But why?
+#Here we can see that packets are coming to those interfaces but are still stuck in ns0. But why?
 
 #Root Cause
 See! The source IP address, 192.168.0.2, is attempting to connect to Google DNS 8.8.8.8 using its private IP address. So it's very basic that the outside world can't reach that private IP because they have no idea about that particular private IP address. That's why packets are able to reach Google DNS, but we are not getting any replies from 8.8.8.8.
@@ -135,17 +135,28 @@ See! The source IP address, 192.168.0.2, is attempting to connect to Google DNS 
 We must somehow change the private IP address to a public address in order to sort out this issue with the help of NAT (Network Translation Address). So, a SNAT (source NAT) rule must be added to the IP table in order to modify the POSTROUTING chain.
 
 ###From root-ns
+```
 kakon@DevOps:~$ sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/16  -j MASQUERADE
+```
 ###Enable IP forwarding
+```
 kakon@DevOps:~$ sudo  sysctl -w net.ipv4.ip_forward=1
 net.ipv4.ip_forward = 1
+```
 ###For Permanent
+```
 kakon@DevOps:~$ vim /etc/sysctl.conf
+```
 #Add or uncomment the following line
+```
 net.ipv4.ip_forward=1
+```
 ###Then Apply
+```
 kakon@DevOps:~$ sudo sysctl -p
 net.ipv4.ip_forward = 1
+```
+#Ping from custom namespace `ns0`
 ```
 kakon@DevOps:~$ sudo ip netns exec ns0 ping 8.8.8.8
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
@@ -155,7 +166,6 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 64 bytes from 8.8.8.8: icmp_seq=4 ttl=115 time=30.6 ms
 64 bytes from 8.8.8.8: icmp_seq=5 ttl=115 time=30.6 ms
 64 bytes from 8.8.8.8: icmp_seq=6 ttl=115 time=30.7 ms
-^C
 --- 8.8.8.8 ping statistics ---
 6 packets transmitted, 6 received, 0% packet loss, time 5010ms
 rtt min/avg/max/mdev = 30.564/30.654/30.796/0.079 ms
