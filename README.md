@@ -1,34 +1,13 @@
 # Learn-container-networking
-1. [CONNECT -NETWORK -NS-TO-ROOT](https://github.com/KakonCSE/Learn-container-networking/tree/main/CONNECT%20-NETWORK%20-NS-TO-ROOT)
-2. [CONNECT-TWO-CUSTOM-NETWORK NS](https://github.com/KakonCSE/Learn-container-networking/tree/main/CONNECT-TWO-CUSTOM-NETWORK%20NS)
-3. [EGRESS-TRAFFIC](https://github.com/KakonCSE/Learn-container-networking/tree/main/EGRESS-TRAFFIC)
+1. [NETWORK-NAMESPACE-INSPECTING](https://github.com/KakonCSE/Learn-container-networking/tree/main/NETWORK-NAMESPACE-INSPECTING)
+2. [CONNECT-NETWORK-NS TO HOST](https://github.com/KakonCSE/Learn-container-networking/tree/main/CONNECT-NETWORK-NS%20TO%20HOST)
+3. [CONNECT -NETWORK -NS-TO-ROOT](https://github.com/KakonCSE/Learn-container-networking/tree/main/CONNECT%20-NETWORK%20-NS-TO-ROOT)
+4. [EGRESS-TRAFFIC](https://github.com/KakonCSE/Learn-container-networking/tree/main/EGRESS-TRAFFIC)
+5. [CONNECT-TWO-CUSTOM-NETWORK NS](https://github.com/KakonCSE/Learn-container-networking/tree/main/CONNECT-TWO-CUSTOM-NETWORK%20NS)
+6. [BRIDGE-NETWORKING-AMONG-NAMESPACES](https://github.com/KakonCSE/Learn-container-networking/tree/main/BRIDGE-NETWORKING-AMONG-NAMESPACES)
+7. [PROCESS-COMMUNICATION-BETWEEN-NAMESPACES](https://github.com/KakonCSE/Learn-container-networking/tree/main/PROCESS-COMMUNICATION-BETWEEN-NAMESPACES)
+8. [FIB-NETWORK-TOPOLOGY](https://github.com/KakonCSE/Learn-container-networking/tree/main/FIB-NETWORK-TOPOLOGY)
+9. [LINUX-NETWORK-NAMESPACE-SIMULATION](https://github.com/KakonCSE/Learn-container-networking/tree/main/LINUX-NETWORK-NAMESPACE-SIMULATION)
 
 
 
-## Connecting a container to host using virtual Ethernet cable
-
-_This is Italic_
-
-~~delete~~
-
-`single line code`
-
-
-```
-code line 1
-code line 2
-```
-
-# List
-1. kakon
-2. Roy
-3. or bia hobe na
-
-# yt link
-https://www.youtube.com
-
-[read more](www.prothomalo.com)
-
-
-# Disable link
-`https://www.youtube.com`
