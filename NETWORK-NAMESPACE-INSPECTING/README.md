@@ -36,6 +36,7 @@ default via 10.56.80.101 dev ens34 proto static metric 100
 ```
 
 #iptables is a user-space utility for configuring packet filter rules in the Linux kernel's Netfilter framework.
+
 #Let's check for `iptable` rules for custom namespace
 
 ```
