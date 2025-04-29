@@ -68,8 +68,6 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 #Test connectivity
 Let's try to ping the red ns from the veth-host interface:
 ```
-ping 192.168.1.1 -c 3
-
 kakon@DevOps:~$ ping 192.168.1.1 -c 3
 PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.
 64 bytes from 192.168.1.1: icmp_seq=1 ttl=64 time=0.188 ms
