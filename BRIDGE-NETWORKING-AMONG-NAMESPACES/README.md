@@ -77,7 +77,7 @@ kakon@DevOps:~$ sudo ip link add veth-lime-ns type veth peer name veth-lime-br
 
 #Each cable now has two ends. Before connecting them to the appropriate bridge and namespaces, run sudo ip link show command to verify if the cables have been successfully created.
 
-# Expected Output
+#Expected Output
 
 ```
 13: veth-blue-br@veth-blue-ns: <BROADCAST,MULTICAST,M-DOWN> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
