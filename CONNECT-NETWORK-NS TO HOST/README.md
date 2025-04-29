@@ -13,7 +13,7 @@ kakon
 ```
 #From the root network namespace, let's create a veth cable:
 ```
-sudo ip link add veth-red type veth peer name veth-host
+kakon@DevOps:~$ sudo ip link add veth-red type veth peer name veth-host
 ```
 #just created a pair of interconnected virtual Ethernet devices. Both veth-red and veth-host lies inside the root ns.
 ```
