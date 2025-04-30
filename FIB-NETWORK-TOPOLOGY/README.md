@@ -27,7 +27,8 @@
 <img src="Simulation.png" alt="picture" />
 
 How the FIB works in our environment:
-1. Router Configuration:
+
+1.Router Configuration:
    
 In our setup, the router namespace is acting as a router between the red and blue namespaces.
 The router's FIB contains information about the next-hop IP addresses for each destination network.
