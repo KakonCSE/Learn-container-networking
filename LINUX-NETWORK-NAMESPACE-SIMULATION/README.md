@@ -44,18 +44,7 @@
 6.⁠ ⁠Enable and Test Connectivity
    Ensure ping works between ns1 and ns2
    Document and test all network paths
-  Verify full connectivity
-
-
-#Implement your solution using either: 
-
-•⁠ ⁠A bash script for automation 
-•⁠ ⁠A Makefile for automated setup and teardown
-
-Deliverables
-1.⁠ ⁠Complete implementation (either manual commands or automation script) 
-2.⁠ ⁠Network diagram showing your topology 
-
+   Verify full connectivity
 
 #Create a network simulation with two separate networks connected via a router using Linux network namespaces and bridges.
 <img src="Simulation.png" alt="picture" />
