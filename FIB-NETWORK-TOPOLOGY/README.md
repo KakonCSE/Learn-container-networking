@@ -23,6 +23,7 @@
 4.If no matching entry is found, the router typically either drops the packet or forwards it to a default route if configured.
 
 #Proposed network topology:
+<img src="Simulation.png" alt="picture" />
 
 How the FIB works in our environment:
 1. Router Configuration:
