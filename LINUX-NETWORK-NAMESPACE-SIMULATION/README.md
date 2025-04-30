@@ -58,6 +58,5 @@ Deliverables
 
 
 #Create a network simulation with two separate networks connected via a router using Linux network namespaces and bridges.
-
-
+<img src="Ns to root.png" alt="picture" />
 
